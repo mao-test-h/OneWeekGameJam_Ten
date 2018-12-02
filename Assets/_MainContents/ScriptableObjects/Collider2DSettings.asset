@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e93660b647018d4e9a5f30a8c44b63f, type: 3}
+  m_Name: Collider2DSettings
+  m_EditorClassIdentifier: 
+  Radius:
+    Player: 1.2
+    Enemy: 3
+    PlayerBullet: 0.4
+    EnemyBullet: 0.4
+  Offset:
+    Player:
+      x: 0
+      y: -0.5
+    Enemy:
+      x: 0
+      y: 0
+    PlayerBullet:
+      x: 0
+      y: 0
+    EnemyBullet:
+      x: 0
+      y: 0

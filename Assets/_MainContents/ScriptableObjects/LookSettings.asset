@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f0654f9a8913b40abd988a1e307728, type: 3}
+  m_Name: LookSettings
+  m_EditorClassIdentifier: 
+  EnemyLooks:
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: 8a6a6a7904a12294baa1b9c5ba206d4a, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: def74edad74e19040957e573c07db4ff, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: a9b5e27327a86dc4d9302f49b37ed030, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: 143aef0dd701da444b337c52c70a59b2, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: ed17d7817143ef94cb17f7ace29284c9, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: df46844af249f0f4086f3fc6d0b4dfe7, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: a1cbad2e7c6cf5e48b02622a151cdf0b, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: 684a4a936d0f0de42b9f80ec84e4bbd4, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: 5ee0f33bfc45e424583e35ba102a480c, type: 2}
+  - Sprite: {fileID: 21300000, guid: a5ec3f98135bcff4ba09c80160334930, type: 3}
+    Material: {fileID: 2100000, guid: 7dc25c453739c4246b65b8831febc907, type: 2}
+  PlayerBulletLook:
+    Sprite: {fileID: 21300000, guid: 5d3593a0008d16947b7e4c52044b29ee, type: 3}
+    Material: {fileID: 2100000, guid: 07b11212dda011d49b34df77265cae0d, type: 2}
+  EnemyBulletLook:
+    Sprite: {fileID: 21300000, guid: 5d3593a0008d16947b7e4c52044b29ee, type: 3}
+    Material: {fileID: 2100000, guid: 438049210b6603a40be935578d4abec4, type: 2}
