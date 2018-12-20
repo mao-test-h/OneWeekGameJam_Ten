@@ -19,6 +19,15 @@ PureECS & MonoBehaviourの相互連携を踏まえた上で設計を試みたゲ
 ※後にQiitaに解説記事も書く予定。
 
 
+### versions.
+
+- **Unity**
+  - 2018.3.0f2
+- **dependencies**
+  - "com.unity.entities": "0.0.12-preview.21"
+  - "com.unity.postprocessing": "2.1.2"
+
+
 
 # ▽ License
 
