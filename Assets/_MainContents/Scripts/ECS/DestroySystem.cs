@@ -12,7 +12,7 @@ namespace MainContents.ECS
     /// <summary>
     /// 破棄処理用 BarrierSystem
     /// </summary>
-    [UpdateAfter(typeof(DestroySystem))]
+    [UpdateBefore(typeof(MainRoutineSystem))]
     public sealed class DestroyBarrier : BarrierSystem { }
 
     /// <summary>
