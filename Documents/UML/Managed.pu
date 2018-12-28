@@ -1,0 +1,74 @@
+@startuml
+hide members
+
+class MonoBehaviour
+class GameManager
+
+package Logic {
+    class ECSManager
+    class Player
+    class EnemySpawner
+}
+
+package ScriptableObjects {
+    class ScriptableObject
+    class PlayerSettings
+    class LookSettings
+    class EnemySettings
+    class Collider2DSettings
+}
+
+package UI {
+    class TitleUI
+    class ResultUI
+}
+
+' ------------------------------------------
+' Logic
+
+' MonoBehaviour
+MonoBehaviour <|-- GameManager
+MonoBehaviour <|-- Player
+
+' GameManager References
+GameManager -- ECSManager : 生成
+GameManager -- Player : 生成
+GameManager -- EnemySpawner : 生成
+
+' ECSManager References
+ECSManager --> Player
+ECSManager --> EnemySpawner
+
+
+
+' ------------------------------------------
+' ScriptableObject
+
+ScriptableObject <|-up- PlayerSettings
+ScriptableObject <|-up- LookSettings
+ScriptableObject <|-up- EnemySettings
+ScriptableObject <|-up- Collider2DSettings
+
+LookSettings -up- ECSManager
+EnemySettings -up- ECSManager
+Collider2DSettings -up- ECSManager
+
+PlayerSettings -up- Player
+EnemySettings -up- EnemySpawner
+
+' ------------------------------------------
+' UI
+
+GameManager -right- UI
+
+MonoBehaviour <|-- TitleUI
+MonoBehaviour <|-- ResultUI
+
+' ------------------------------------------
+
+note left of ScriptableObjects
+    ScriptableObjectの参照解決はGameManager経由、
+    若しくはMonoBehaviourの派生クラスであればInspectorより設定される。
+end note
+
+@enduml

@@ -1,0 +1,60 @@
+@startuml MainWorld
+hide members
+hide circle
+
+package MainWorld {
+    package ComponentSystem {
+        ' JobComponentSystems
+        class DestroySystem #GreenYellow
+        class MainRoutineSystem #GreenYellow
+        class Transform2DSystem #GreenYellow
+        class Collider2DUpdate #GreenYellow
+
+        ' ComponentSystem
+        class RenderingSystemBootstrap as "★RenderingSystemBootstrap" #Cyan
+        class MeshInstanceRendererSystem as "★MeshInstanceRendererSystem" #Cyan
+        class DrawCollider2DSystem as "DrawCollider2DSystem(DebugOnly)" #Cyan
+        class Collision2Dsystem #Cyan
+
+        ' BarrierSystem
+        class TransformBarrierSystem #Orange
+        class DestroyBarrier #Orange
+    }
+}
+
+package MonoBehaviour {
+    class ECSManager
+}
+
+
+
+
+
+' ------------------------------------------
+' MonoBehaviour
+
+ECSManager --> MainWorld : Worldの生成
+
+
+
+' ------------------------------------------
+' ComponentSystem
+
+' Execute
+DestroySystem -down- DestroyBarrier
+DestroyBarrier -down- MainRoutineSystem
+MainRoutineSystem -down- Transform2DSystem
+Transform2DSystem -down- TransformBarrierSystem
+TransformBarrierSystem -down- Collider2DUpdate
+Collider2DUpdate -down- RenderingSystemBootstrap
+RenderingSystemBootstrap -down- MeshInstanceRendererSystem
+MeshInstanceRendererSystem -down- DrawCollider2DSystem
+DrawCollider2DSystem -down- Collision2Dsystem
+
+note right of ComponentSystem
+    黄緑 ・・・JobComponentSystemを継承
+    水色 ・・・ComponentSystemを継承
+    空色 ・・・BarrierSystemを継承
+end note
+
+@enduml
