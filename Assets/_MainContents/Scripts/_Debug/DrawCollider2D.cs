@@ -33,9 +33,9 @@ namespace MainContents.DebugUtility
         public static NativeArray<SphereCollider2D> EnemyBulletPositions;
 
         /// <summary>
-        /// MonoBehaviour.OnDrawGizmosSelected
+        /// MonoBehaviour.OnDrawGizmos
         /// </summary>
-        void OnDrawGizmosSelected()
+        void OnDrawGizmos()
         {
             if (!this._isEnable) { return; }
 
