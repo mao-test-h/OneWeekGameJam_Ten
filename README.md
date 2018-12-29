@@ -16,7 +16,9 @@ PureECS & MonoBehaviourの相互連携を踏まえた上で設計を試みたゲ
 - 一部Fade/Camera Shakeと言った演出をカット(DOTweenを使用しているため)
 
 ※短期間で作った作品のために設計的に最適解ではない可能性もある上で、デバッグしきれていない部分もあるかもしれませんが...そこらを踏まえた上でご参考にして頂けると幸いです。  
-※後にQiitaに解説記事も書く予定。
+
+- 追記 : 技術解説記事も書きました。
+  - [【Unity】ECS + GameObject/MonoBehaviourの連携を踏まえてゲームを作ってみたので技術周りについて解説](https://qiita.com/mao_/items/332aa226d7eb35112956)
 
 
 ### versions.
