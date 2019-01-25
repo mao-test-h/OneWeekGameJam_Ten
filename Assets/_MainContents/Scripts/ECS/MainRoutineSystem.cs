@@ -438,7 +438,7 @@
             // ※Ptrで渡さないと値渡しになってシード値が維持されないため。
             var random = new Random((uint)System.DateTime.Now.Ticks);
             var randomStrSize = UnsafeUtility.SizeOf<Random>();
-            this._randomPtr = (Random*)UnsafeUtility.Malloc(randomStrSize, 16, Allocator.Persistent);
+            this._randomPtr = (Random*)UnsafeUtility.Malloc(randomStrSize, UnsafeUtility.AlignOf<Random>(), Allocator.Persistent);
             UnsafeUtility.MemClear(this._randomPtr, randomStrSize);
             UnsafeUtility.CopyStructureToPtr<Random>(ref random, this._randomPtr);
         }

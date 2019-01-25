@@ -125,11 +125,11 @@
         public PlayerStatus(PlayerParam playerParam)
         {
             var playerParamSize = UnsafeUtility.SizeOf<PlayerParam>();
-            this._playerParamPtr = (PlayerParam*)UnsafeUtility.Malloc(playerParamSize, 16, Allocator.Persistent);
+            this._playerParamPtr = (PlayerParam*)UnsafeUtility.Malloc(playerParamSize, UnsafeUtility.AlignOf<PlayerParam>(), Allocator.Persistent);
             UnsafeUtility.MemClear(this._playerParamPtr, playerParamSize);
             UnsafeUtility.CopyStructureToPtr<PlayerParam>(ref playerParam, this._playerParamPtr);
 
-            this._barrierPointPtr = (float*)UnsafeUtility.Malloc(sizeof(float), 16, Allocator.Persistent);
+            this._barrierPointPtr = (float*)UnsafeUtility.Malloc(sizeof(float), UnsafeUtility.AlignOf<float>(), Allocator.Persistent);
             this.BarrierPoint = playerParam.MaxBarrierPoint;
         }
 

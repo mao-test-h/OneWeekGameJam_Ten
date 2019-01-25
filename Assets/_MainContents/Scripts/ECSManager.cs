@@ -94,7 +94,7 @@ namespace MainContents
             {
                 // 弾幕設定のポインタを取得
                 var barrageParamSize = UnsafeUtility.SizeOf<BarrageParam>();
-                this._barrageParamPtr = (BarrageParam*)UnsafeUtility.Malloc(barrageParamSize, 16, Allocator.Persistent);
+                this._barrageParamPtr = (BarrageParam*)UnsafeUtility.Malloc(barrageParamSize, UnsafeUtility.AlignOf<BarrageParam>(), Allocator.Persistent);
                 UnsafeUtility.MemClear(this._barrageParamPtr, barrageParamSize);
                 UnsafeUtility.CopyStructureToPtr<BarrageParam>(ref this._enemySettings.Barrage, this._barrageParamPtr);
 

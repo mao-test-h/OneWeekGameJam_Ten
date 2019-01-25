@@ -46,7 +46,7 @@ namespace MainContents
 
             public GameStatus(int defaultAddScore)
             {
-                this._scorePtr = (int*)UnsafeUtility.Malloc(sizeof(int), 16, Allocator.Persistent);
+                this._scorePtr = (int*)UnsafeUtility.Malloc(sizeof(int), UnsafeUtility.AlignOf<int>(), Allocator.Persistent);
                 this._defaultAddScore = defaultAddScore;
                 this.Score = 0;
             }
